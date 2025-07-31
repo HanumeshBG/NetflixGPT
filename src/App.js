@@ -1,11 +1,29 @@
 import ReactDOM from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { Provider } from 'react-redux';
+import Body from './components/Body'    
+import Login from './components/Login'
+import Browser from './components/Browser'
+import appStore from "./utils/appStore";
 
 const App = () => {
+    const appRouter = createBrowserRouter([
+        {
+            path: "/",
+            element: <Login />
+        },
+        {
+            path: "/browser",
+            element: <Browser />
+        }
+    ])
+
     return (
-        // <Provider store={appStore}>
-        //     <Body />
-        // </Provider>
-        <h1 className="text-3xl font-bold underline">Welocome To REACT</h1>
+        <Provider store={appStore}>
+            <RouterProvider router={appRouter}>
+                <Body />
+            </RouterProvider>
+        </Provider>
     );
 }
 
