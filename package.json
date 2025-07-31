@@ -1,0 +1,36 @@
+{
+  "name": "netflixgpt",
+  "version": "1.0.0",
+  "description": "Netflix app with GPT initegration",
+  "homepage": "https://github.com/HanumeshBG/NetflixGPT#readme",
+  "bugs": {
+    "url": "https://github.com/HanumeshBG/NetflixGPT/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HanumeshBG/NetflixGPT.git"
+  },
+  "license": "ISC",
+  "author": "Hanumesh",
+  "type": "commonjs",
+  "scripts": {
+    "test": "jest",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.8.2",
+    "@tailwindcss/postcss": "^4.1.11",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-redux": "^9.2.0",
+    "react-router-dom": "^6.30.1",
+    "tailwindcss": "^4.1.11"
+  },
+  "devDependencies": {
+    "parcel": "^2.15.4"
+  },
+  "browserslist": [
+    "last 10 versions"
+  ]
+}
