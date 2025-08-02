@@ -6,11 +6,13 @@ export const API_OPTIONS = {
   method: 'GET',
   headers: {
     accept: 'application/json',
-    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhYzY3YTY5YWFmNTQ2MWM0ZGIwNzNkMGJmODM2NjAyMSIsIm5iZiI6MTc1MzYxOTcwNy42MjgsInN1YiI6IjY4ODYxY2ZiMDNkZmQxZjEwMjE2ZDBiNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.993AQCG2RxN3nly8V83QQb_nEaElhiCNba-m0xGj3nQ'
+    Authorization: `Bearer ${process.env.REACT_APP_TMDB_API_KEY}` // Use environment variable for API key
   }
 };
 
 export const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500/";
+
+export const OPENAI_KEY = process.env.REACT_APP_OPENAI_KEY; // Use environment variable for OpenAI key
 
 export const SUPPORTED_LANGUAGE = [
   { identifier: "en", label: "English" },

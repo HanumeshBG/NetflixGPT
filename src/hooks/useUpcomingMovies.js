@@ -1,10 +1,12 @@
 import { useEffect } from 'react';
 import { API_OPTIONS } from '../utils/constants';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addUpcomingMovies } from '../utils/movieSlice';
 
 const useUpcomingMovies = () => {
     const dispatch = useDispatch();
+    const upcomingMovies = useSelector(store => store.movies.upcomingMovies);
+
     const getUpcomingMovieList = async () => {
         // Function to fetch the list of currently playing movies
         // This can be implemented using an API call to a movie database
@@ -15,7 +17,7 @@ const useUpcomingMovies = () => {
     }
 
     useEffect(() => {
-        getUpcomingMovieList();
+        !upcomingMovies && getUpcomingMovieList();
     }, [])
 }
 
