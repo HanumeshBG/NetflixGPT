@@ -50,13 +50,13 @@ const Header = () => {
 }, [])
 
   return (
-    <div className='relative z-50 px-8 py-2 bg-gradient-to-b from-black flex items-center justify-between w-full'>
+    <div className='relative z-50 px-8 py-2 bg-gradient-to-b from-black flex flex-col md:flex-row items-center justify-between w-full'>
         <img
           src= { LOGO }
           alt="Netflix Logo"
           className='w-44'
         />
-        {user && (<div>
+        {user && (<div className='mt-2 md:mt-0'> 
             {
               showGptSearch && (<select className='text-white p-2 bg-gray-800 rounded-md' onChange={handleLanguageChange}>
                 {

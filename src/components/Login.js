@@ -65,11 +65,11 @@ const Login = () => {
         <img
           src= { BACKGROUND_IMAGE}
           alt="Netflix Background"
-          className="absolute top-0 left-0 w-full h-full object-cover brightness-50 -z-10"
+          className="absolute top-0 left-0 w-full h-full object-cover -z-10"
         />
       </div>
-      <div className='flex items-center justify-center h-full'>
-        <form onSubmit={(e) => e.preventDefault()} className='bg-black/50 w-4/12 p-8 flex flex-col rounded-lg text-white shadow-lg'>
+      <div className='flex items-center justify-center mt-[10%]'>
+        <form onSubmit={(e) => e.preventDefault()} className='bg-black/50 w-11/12 sm:w-6/12 md:w-4/12 p-8 flex flex-col rounded-lg text-white shadow-lg'>
           <h2 className="text-2xl font-bold mb-6">{isSignInForm ? "Sign In" : "Sign Up"}</h2>
           {!isSignInForm && (<input
             ref = {name}
